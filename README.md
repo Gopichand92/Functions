@@ -46,7 +46,7 @@ def cal(a,b):
     return a+b,a-b,a*b,a/b
 a=int(input("Enter a:"))
 b=int(input("Enter b:"))
-sum,diff,pro,div=cal(a,b)
+sum,diff,pro,div=cal(a,b)     
 print("Sum",sum)
 print("Subtract",diff)
 print("Product",pro)
@@ -59,4 +59,22 @@ Subtract 42
 Product 88
 Divide 22.0
 --------------------------------------------------------------------------
-  
+ def eo(numbers):
+    e=0
+    o=0
+    for n in numbers:
+        if n %2==0:
+            e+=1
+        else:
+            o+=1
+    return e,o
+num=input("Enter number of space seperated:")
+num_list=list(map(int,num.split()))
+e,o=eo(num_list)
+print("Even Count:",e)
+print("Odd Count:",o)
+OUTPUT:
+Enter number of space seperated: 8 66 90 888 45 2 167 46 
+Even Count: 6
+Odd Count: 2
+----------------------------------------------------------------------------
