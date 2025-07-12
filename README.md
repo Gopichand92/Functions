@@ -78,3 +78,54 @@ Enter number of space seperated: 8 66 90 888 45 2 167 46
 Even Count: 6
 Odd Count: 2
 ----------------------------------------------------------------------------
+def outer():
+    print("This is a outer function.......")
+    def inner():
+        print("this is an inner function........")
+    inner()
+outer()   
+OUTPUT:
+This is a outer function.......
+this is an inner function........
+-----------------------------------------------------------------------------------
+def cal(a,b):
+    def add():
+        return a+b
+    def sub():
+        return a-b
+    def mul():
+        return a*b
+    print("Addition",add())
+    print("Subtract",sub())
+    print("product",mul())
+a=int(input("Enter a number:"))
+b=int(input("Enter a number:"))
+cal(a,b)
+OUTPUT:
+Enter a number: 5
+Enter a number: 5
+Addition 10
+Subtract 0
+product 25
+-------------------------------------------------------------------------------------------
+def mul_by(n):
+    def inner(x):
+        return x*n
+    return inner
+times_2= mul_by(2)
+times_3= mul_by(3)
+print(times_2(5))
+print(times_3(10))
+ OUTPUT:
+ 10
+30
+-----------------------------------------------------------------------------------------
+def greet(text):
+    def inner(name):
+        return f"{text},{name}!!!!!!"
+    return inner 
+hi=greet('Hello')
+print(hi('Yaar'))
+OUTPUT:
+Hello,Yaar!!!!!!
+----------------------------------------------------------------------------------------
