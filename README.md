@@ -128,4 +128,42 @@ hi=greet('Hello')
 print(hi('Yaar'))
 OUTPUT:
 Hello,Yaar!!!!!!
+-------------------------------------------------------------------------------------
+fact=1
+def factorial(n):
+    global fact
+    fact=1
+    for i in range(1,n+1):
+        fact*=i
+    return fact
+num=int(input("Enter a number:"))
+if num<0:
+    print("cannot derive for -ve number")
+else:
+    factorial (num)
+    print(f"factorial of {num} is",fact )
+OUTPUT:
+Enter a number: 6
+factorial of 6 is 720
+------------------------------------------------------------------------------------
+def factorial(n):
+    if n==0 or n==1:
+        return 1
+    return n*factorial(n-1)
+num=int(input("Enter the value:"))
+value = factorial(num)
+print(value)
+OUTPUT:
+Enter the value: 4
+24
+------------------------------------------------------------------------------------
+def sum(n):
+    if n==0:
+        return 0
+    return n+sum(n-1)
+num=int(input("enter the number"))
+print(f"sum of first {num} numbers is {sum(num)}")
+OUTPUT:
+enter the number 2
+sum of first2 numbers is 3
 ----------------------------------------------------------------------------------------
