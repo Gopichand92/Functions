@@ -167,4 +167,13 @@ OUTPUT:
 enter the number 2
 sum of first2 numbers is 3
 ------------------------------------------------------------------------------------
-
+def retext(c):
+    if len(c)==0:
+        return c
+    return retext(c[1:])+c[0]
+text=input("Enter a word:")
+print(f"Reverse the word {text} is {retext(text)}")
+OUTPUT:
+Enter a word: utnihc o/w unam
+Reverse the word utnihc o/w unam is manu w/o chintu
+--------------------------------------------------------------------------------------
