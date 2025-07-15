@@ -146,6 +146,16 @@ OUTPUT:
 Enter a number: 6
 factorial of 6 is 720
 ------------------------------------------------------------------------------------
+def info(**kwargs):
+    for key,value in kwargs.items():
+        print(f"{key}:{value}")
+info(name='gopi',age=21,cgpa=7.20)
+OUTPUT:
+name:gopi
+age:21
+cgpa:7.2
+------------------------------------------------------------------------------
+
 def factorial(n):
     if n==0 or n==1:
         return 1
