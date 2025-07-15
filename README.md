@@ -177,3 +177,11 @@ OUTPUT:
 Enter a word: utnihc o/w unam
 Reverse the word utnihc o/w unam is manu w/o chintu
 --------------------------------------------------------------------------------------
+def sumnum(*args):
+    print(args[4])
+    return sum(args)
+print(sumnum(1,2,3,4,5,6,7,8,9,10))
+OUTPUT:
+5
+55
+------------------------------------------------------------------------------------
