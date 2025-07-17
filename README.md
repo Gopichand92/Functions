@@ -195,3 +195,73 @@ OUTPUT:
 5
 55
 ------------------------------------------------------------------------------------
+#fibonacci 0 1 1 2 3 5 8 13 21 34 55
+def fib(n):
+    if n<=1:
+        return n
+    else:
+        return fib(n-1)+fib(n-2)
+num=int(input("enter term:"))
+for i in range(num):
+    print(fib(i),end=' ')
+OUTPUT:
+enter term: 10
+0 1 1 2 3 5 8 13 21 34
+------------------------------------------------------------------------------------------
+def dsum(n):
+    if n==0:
+        return 0
+    return n%10 + temp(n//10)
+def temp(n):
+    return dsum(n)
+num=int(input("enter a 4 digit number:"))
+print("sum of digits:",dsum(num))
+OUTPUT:
+enter a 4 digit number: 1245
+sum of digits: 12
+--------------------------------------------------------------------------------------------
+def one(n):
+    if n==0:
+        return True
+    else:
+        return two(n-1)
+def two(n):
+    if n==0:
+        return False
+    else:
+        return one(n-1)
+num=int(input("enter a number:"))
+if one(num):
+    print(num,"is even")
+else:
+    print(num,"is odd")
+OUTPUT:
+enter a number: 68
+68 is even
+---------------------------------------------------------------------------------------------
+def A(n):
+    if n<=0:
+        return
+    print("Gopi",n)
+    B(n-1)
+def B(n):
+    if n<=0:
+        return
+    print("Parikela",n)
+    A(n-1)
+num=int(input("Enter a number:"))
+A(num)
+OUTPUT:
+Enter a number: 11
+Gopi 11
+Parikela 10
+Gopi 9
+Parikela 8
+Gopi 7
+Parikela 6
+Gopi 5
+Parikela 4
+Gopi 3
+Parikela 2
+Gopi 1
+-------------------------------------------------------------------------------------------------
