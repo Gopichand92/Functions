@@ -337,3 +337,22 @@ Enter a number: 4
 2
 1
 -----------------------------------------------------------------------------------------------
+ def sumhead(n):
+    if n==0:
+        return 0
+    return n+sumhead(n-1)
+num=int(input("Enter a number:"))
+print("Sum:",sumhead(num))
+
+def sumtail(n,temp=0):
+    if n==0:
+        return temp
+    return sumtail(n-1,temp+n)
+num=int(input("Enter a number:"))
+print("sum:",sumtail(num))
+OUTPUT:
+Enter a number: 5
+Sum: 15
+Enter a number: 3
+sum: 6
+--------------------------------------------------------------------------------------------
