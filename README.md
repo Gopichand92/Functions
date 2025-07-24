@@ -1,4 +1,4 @@
-# Functions
+ # Functions
 def add(a,b):
     return a+b
 student1=int(input("Enter the money:"))
@@ -301,4 +301,24 @@ bca
 cab
 cba
 --------------------------------------------------------------------------------------------------
- 
+ def binary(n,b=''):
+    if n==0:
+        print(b)
+        return
+    binary(n-1,b+'0')
+    binary(n-1,b+'1')
+length=int(input("Enter length  of string:"))
+print("Binary combinations....")
+binary(length)
+OUTPUT:
+Enter length  of string: 3
+Binary combinations....
+000
+001
+010
+011
+100
+101
+110
+111
+-----------------------------------------------------------------------------------------------
