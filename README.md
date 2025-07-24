@@ -10,7 +10,7 @@ OUTPUT:
       Enter the money:4000
       total amount: 7000
 ---------------------------------------------------------------
-  ef value():
+  def value():
     return 3.14159
 result=value()
 print("value in the function is",result)
@@ -265,3 +265,39 @@ Gopi 3
 Parikela 2
 Gopi 1
 -------------------------------------------------------------------------------------------------
+def fib(n):
+    if n<=1:
+        return n
+    return fib(n-1)+fib(n-2)
+terms=int(input("Enter number of terms to print:"))
+print(("fibonacci series....."))
+for i in range(terms):
+    print(fib(i),end=' ')
+OUTPUT:
+Enter number of terms to print: 6
+fibonacci series.....
+0 1 1 2 3 5 
+-------------------------------------------------------------------------------------------------
+''' permutations of char in tree recursion '''
+
+def permute(s, bucket=''):
+    if not s:
+        print(bucket)
+        return
+    for i in range(len(s)):
+        ns=s[:i]+s[i+1:]
+        permute(ns,bucket+s[i])
+        
+text=input("Enter a name/word: ")
+print("possibilities of combinations.....")
+permute(text)
+OUTPUT:
+Enter a name/word:  abc
+possibilities of combinations.....
+abc
+acb
+bac
+bca
+cab
+cba
+--------------------------------------------------------------------------------------------------
